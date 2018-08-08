@@ -4,8 +4,9 @@
 public class Damageable : MonoBehaviour
 {
 
-	public float damageMultiply = 10f;
+	public float damageMultiply = 100f;
 	float _damage = 1f;
+	float force;
 	
 	Rigidbody rb;
 	void Awake()
@@ -17,7 +18,8 @@ public class Damageable : MonoBehaviour
 	public void AddDamage(Vector3 dir, float damage)
 	{
 		_damage += damage;
+		force = Mathf.Pow(_damage, (1.3f / _damage) + 1f);
 		transform.localScale = new Vector3(1f,1f,1f) * _damage;
-		rb.AddForce(_damage * damageMultiply * dir);
+		rb.AddForce(_damage * force *damageMultiply * dir);
 	}
 }

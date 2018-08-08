@@ -8,18 +8,34 @@ public class Gun : MonoBehaviour
 	public Transform shootingPoint;
 	public float power = 10f;
 	
-	void Update () {
-		if (Input.GetButtonDown("Fire1"))
-		{
-			Shoot();
-		}
+	
+	bool isCharging = false;
+	void Update ()
+	{
+		if (!isCharging && Input.GetButtonDown("Fire1"))
+			Charge();
+		if (isCharging && Input.GetButtonUp("Fire1"))
+			Release();
 	}
 
-	void Shoot()
+	private GameObject pro;
+	
+	private void Charge()
 	{
-		var pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
+		isCharging = true;
+		pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
+	}
+
+	private void Release()
+	{
+		isCharging = false;
 		pro.GetComponent<ShotController>()
 			.Shoot((shootingPoint.position - center.position).normalized * power);
+	}
+	
+	void Shoot()
+	{
+		
 	}
 	
 }
