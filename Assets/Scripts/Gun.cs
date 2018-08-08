@@ -7,9 +7,7 @@ public class Gun : MonoBehaviour
 	public Transform center;
 	public Transform shootingPoint;
 	public float power = 10f;
-	public float reloadRate = 0.5f;
-
-	float _nextTimeShot;
+	
 	
 	bool isCharging = false;
 	void Update ()
@@ -24,8 +22,6 @@ public class Gun : MonoBehaviour
 	
 	private void Charge()
 	{
-		if(_nextTimeShot > Time.time)
-			return;
 		isCharging = true;
 		pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
 	}
@@ -33,8 +29,13 @@ public class Gun : MonoBehaviour
 	private void Release()
 	{
 		isCharging = false;
-		_nextTimeShot = Time.time + reloadRate;
 		pro.GetComponent<ShotController>()
 			.Shoot((shootingPoint.position - center.position).normalized * power);
 	}
+	
+	void Shoot()
+	{
+		
+	}
+	
 }
