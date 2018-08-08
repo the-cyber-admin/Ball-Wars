@@ -3,7 +3,6 @@
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerCtrl : MonoBehaviour
 {
-
 	public float speed = 5f;
 	public float jumpPower = 400f;
 
