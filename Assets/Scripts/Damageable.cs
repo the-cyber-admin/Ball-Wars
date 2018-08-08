@@ -5,6 +5,7 @@ public class Damageable : MonoBehaviour
 {
 
 	public float damageMultiply = 100f;
+	public float maxDamage = 3f;
 	float _damage = 1f;
 	float force;
 	
@@ -17,9 +18,11 @@ public class Damageable : MonoBehaviour
 
 	public void AddDamage(Vector3 dir, float damage)
 	{
+		//TODO Decrease Sizing value every time he get hit
 		_damage += damage;
-		force = Mathf.Pow(_damage, (1.3f / _damage) + 1f);
-		transform.localScale = new Vector3(1f,1f,1f) * _damage;
-		rb.AddForce(_damage * force *damageMultiply * dir);
+		var TweakDamage = Mathf.Clamp(_damage , 1f ,maxDamage);
+		force = TweakDamage;
+		transform.localScale = new Vector3(1f,1f,1f) * TweakDamage;
+		rb.AddForce(_damage * force * damageMultiply * dir);
 	}
 }

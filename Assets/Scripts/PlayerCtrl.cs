@@ -53,10 +53,12 @@ public class PlayerCtrl : MonoBehaviour
 		{
 			jump = false;
 			timesJumped++;
+
+			rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+			rb.AddForce(jumpPower * Vector3.up);
 		}
-		rb.velocity = new Vector3(rb.velocity.x , 0 , rb.velocity.z);
-		rb.AddForce(jumpPower * Vector3.up);
-	}	
+	}
+
 	private void OnCollisionEnter(Collision other)
 	{
 		if (other.collider.CompareTag("Walkable"))
