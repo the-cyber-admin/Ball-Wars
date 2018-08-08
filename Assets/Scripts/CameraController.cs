@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
 
 	float GetLongestDistance()
 	{
-		var bounds = new Bounds(targets[0].position , Vector3.zero);
+		var bounds = new Bounds();
 
 		foreach (var target in targets)
 		{
@@ -64,7 +64,7 @@ public class CameraController : MonoBehaviour
 			return targets[0].position;
 		}
 		
-		var bounds = new Bounds(targets[0].position , Vector3.zero);
+		var bounds = new Bounds();
 		
 		foreach (var t in targets)
 		{

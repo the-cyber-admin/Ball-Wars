@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 135216676267934402}
   - component: {fileID: 54820189275828222}
   - component: {fileID: 114989377467683026}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Projectile
-  m_TagString: Player Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 9be16ede77c213b468787fcc47236ecf, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,11 +93,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609851314222302}
   serializedVersion: 2
-  m_Mass: 0.1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
@@ -113,9 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 3
-  maxScale: 1
-  scaleIncreaseFactor: 0.5
-  fullChrageDamage: 1
 --- !u!135 &135216676267934402
 SphereCollider:
   m_ObjectHideFlags: 1
