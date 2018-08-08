@@ -13,9 +13,13 @@ public class Gun : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public float reloadRate = 0.5f;
 
 	float _nextTimeShot;
+=======
+	
+>>>>>>> parent of 7ead4d7... Firerate
 =======
 	
 >>>>>>> parent of 7ead4d7... Firerate
@@ -74,6 +78,7 @@ public class Gun : MonoBehaviour
 <<<<<<< HEAD
 		isCharging = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		_nextTimeShot = Time.time + reloadRate;
 =======
 		var pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
@@ -92,6 +97,8 @@ public class Gun : MonoBehaviour
 		var pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
 =======
 >>>>>>> parent of 7ead4d7... Firerate
+=======
+>>>>>>> parent of 7ead4d7... Firerate
 		pro.GetComponent<ShotController>()
 			.Shoot((shootingPoint.position - center.position).normalized * power);
 	}
@@ -100,6 +107,7 @@ public class Gun : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of dc23c87... Add Jump Limter
 =======
 	
@@ -111,10 +119,15 @@ public class Gun : MonoBehaviour
 =======
 >>>>>>> parent of dc23c87... Add Jump Limter
 =======
+=======
+>>>>>>> parent of 7ead4d7... Firerate
 	void Shoot()
 	{
 		
 	}
 	
+<<<<<<< HEAD
+>>>>>>> parent of 7ead4d7... Firerate
+=======
 >>>>>>> parent of 7ead4d7... Firerate
 }
