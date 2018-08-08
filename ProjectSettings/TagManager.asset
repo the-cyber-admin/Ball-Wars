@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player Projectile
+  - Enemy Projectile
+  - Enemy
+  - Walkable
   layers:
   - Default
   - TransparentFX
@@ -14,10 +18,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Player Projectile
+  - Enemy Projectile
   - 
   - 
   - 

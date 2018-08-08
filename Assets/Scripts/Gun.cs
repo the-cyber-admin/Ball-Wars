@@ -7,11 +7,6 @@ public class Gun : MonoBehaviour
 	public Transform center;
 	public Transform shootingPoint;
 	public float power = 10f;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public float reloadRate = 0.5f;
 
 	float _nextTimeShot;
@@ -33,75 +28,13 @@ public class Gun : MonoBehaviour
 			return;
 		isCharging = true;
 		pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
-=======
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-	
-	void Update () {
-		if (Input.GetButtonDown("Fire1"))
-		{
-			Shoot();
-		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
 	}
 
-	void Shoot()
+	private void Release()
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		isCharging = false;
 		_nextTimeShot = Time.time + reloadRate;
-=======
-		var pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
->>>>>>> parent of dc23c87... Add Jump Limter
-		pro.GetComponent<ShotController>()
-			.Shoot((shootingPoint.position - center.position).normalized * power , transform);
-	}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-		var pro = Instantiate(projectile, shootingPoint.position, Quaternion.identity, shootingPoint);
 		pro.GetComponent<ShotController>()
 			.Shoot((shootingPoint.position - center.position).normalized * power);
 	}
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
-	
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
-=======
->>>>>>> parent of dc23c87... Add Jump Limter
 }
